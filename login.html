@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login Page</title>
+
+    <style>
+        body{
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        .box{
+            background-color: white;
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        input{
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>Login Form</h2>
+
+        <input type="text" id="username" placeholder="Enter Username">
+        <br>
+
+        <input type="password" id="password" placeholder="Enter Password">
+        <br>
+
+        <input type="checkbox" onclick="showPassword()">
+        Show Password
+
+        <br><br>
+
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+
+        function showPassword()
+        {
+            let pass = document.getElementById("password");
+
+            if(pass.type == "password")
+            {
+                pass.type = "text";
+            }
+            else
+            {
+                pass.type = "password";
+            }
+        }
+
+        function login()
+        {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if(user == "" || pass == "")
+            {
+                alert("Please fill all fields");
+            }
+            else
+            {
+                alert("Login Successful");
+            }
+        }
+
+    </script>
+
+</body>
+</html>
